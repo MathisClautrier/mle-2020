@@ -16,7 +16,7 @@ def get_most_similar(similarity, items, name, year=None, top=10, get_id= get_mov
         The purpose of this function is select the most similar items
 
         return an array of most similar items
-    """"
+    """
     index_items = get_id(items, name, year)
     best = similarity[index_items].argsort()[::-1]
     return [(ind, get_name(items, ind), similarity[index_items, ind]) for ind in best[:top] if ind != index_items]

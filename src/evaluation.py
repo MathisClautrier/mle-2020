@@ -15,7 +15,7 @@ def evaluation(recommendations,ratings,user_id,item_id='movie_id',explore=True):
         The purpose of this function is to evaluation at which point is a recommendation efficient
 
         return n, an integer which is as greater as the recommendations if efficient
-    """"
+    """
     userRatings=ratings[ratings['user_id']==user_id]
     movies_ids_recommanded=recommendations[item_id].values
     ratedmovies=userRatings['movie_id'].values
